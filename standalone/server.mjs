@@ -19,7 +19,7 @@ import { localAuth, authCookie, cookieValue } from '../lib/local-auth.ts';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 // Exact public assets only; request paths never become filesystem paths.
 const publicAssets = new Map([
-  ...['meeting-avatars.png','workspace.jpg','showcase-font.css','fonts/hanken-grotesk.woff2'].map(name=>['/showcase/assets/'+name,['docs/assets/'+name,name.endsWith('.css')?'text/css; charset=utf-8':name.endsWith('.woff2')?'font/woff2':name.endsWith('.jpg')?'image/jpeg':'image/png']]),
+  ...['meeting-avatars.png','workspace.jpg','showcase-font.css','fonts/hanken-grotesk.woff2','favicon.svg'].map(name=>['/showcase/assets/'+name,['docs/assets/'+name,name.endsWith('.svg')?'image/svg+xml':name.endsWith('.css')?'text/css; charset=utf-8':name.endsWith('.woff2')?'font/woff2':name.endsWith('.jpg')?'image/jpeg':'image/png']]),
   ['/assets/account.js', ['public/assets/account.js', 'text/javascript; charset=utf-8']],
   ['/assets/workspace.js', ['public/assets/workspace.js', 'text/javascript; charset=utf-8']],
   ['/assets/meeting-print.png', ['public/assets/meeting-print.png', 'image/png']],
@@ -131,6 +131,8 @@ export function createApplication({config = loadConfig(), databasePath = path.jo
         if (req.headers.origin!==origin || req.headers['sec-fetch-site']==='cross-site') return send({error:'僅接受本站提交。'},403);
         if (req.headers['content-type']?.split(';')[0].trim().toLowerCase()!=='application/json') return send({error:'請使用 JSON 格式。'},415);
       }
+      const expectedAccount=req.headers['x-account-id'];
+      if(expectedAccount&&!['/api/auth/login','/api/auth/register'].includes(url.pathname)&&expectedAccount!==user?.id)return send({error:'登入帳號已變更，請重新開啟工作台。',code:'account_changed'},409);
       if(req.method==='POST' && ['/api/auth/register','/api/auth/login'].includes(url.pathname)){
         authAttempts=authAttempts.filter(time=>Date.now()-time<600000);
         if(authAttempts.length>=20)return send({error:'登入嘗試過於頻繁，請稍後再試。'},429,{'Retry-After':'600'});

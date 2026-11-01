@@ -1,7 +1,7 @@
 {
   "version": "0.4.0",
   "exportedAt": "2026-11-01T02:20:13.009Z",
-  "sourceCommit": "b3e24348cb8ea7cdaf947aa24a5f0273e52dfaa2",
+  "sourceCommit": "d7462af7950539a6a0c744c763c4a2fa4c3e5200",
   "scope": "Standalone desktop product; no source Git history, runtime accounts, secrets or private QA documents",
   "files": [
     {
@@ -14,7 +14,7 @@
     },
     {
       "file": "README.md",
-      "sha256": "29478bb64353069c81a4039a517d89e7f1f87fe2408b675c2b518a8bc1c97ca3"
+      "sha256": "131cba237c2bff9bd3bbe9899c54128247ba690bcfe5a294152df8a7491ff5e4"
     },
     {
       "file": "Start_ActionDesk.command",
@@ -27,6 +27,18 @@
     {
       "file": "data/evaluation/情境測例.json",
       "sha256": "a3631fdfbf1c119f4fa1de60212baea69d4ebe0b8e1706ae39a265c4f3fad887"
+    },
+    {
+      "file": "docs/acceptance/notion-owner.md",
+      "sha256": "7f909d65c770b7e18e0258adc382d8b0a427aa0aaab18cd949ee237330a77e45"
+    },
+    {
+      "file": "docs/assets/cover.png",
+      "sha256": "cf5baba2f49961ef018fc70fe9f08746af6a450be87ab829b339c2570a6d0c16"
+    },
+    {
+      "file": "docs/assets/favicon.svg",
+      "sha256": "1c968b767a80942eb21e39c5ff05a9a1e09525d4dc45cf168b932e66b0ef80ce"
     },
     {
       "file": "docs/assets/fonts/hanken-grotesk.woff2",
@@ -54,11 +66,11 @@
     },
     {
       "file": "docs/index.html",
-      "sha256": "11118923bab544ea8e55234ecbe54c6bc1b1f2c64cb6c9f7ede8a5a3fde2e776"
+      "sha256": "6e851fbf001b519c227784beba9f35b0a12f18aa78b70ca5871357fb2f5b6774"
     },
     {
       "file": "docs/verification.md",
-      "sha256": "3d2763bf3c9500247f390ac75253c22688336586300c95b45bc8cce47eb3997c"
+      "sha256": "e2a345faa0e73273744113a951a1524cd660422c83650bb1bdd991609c2168a8"
     },
     {
       "file": "lib/attribution.ts",
@@ -98,7 +110,7 @@
     },
     {
       "file": "lib/task-engine.ts",
-      "sha256": "75357213fcce48cdc608e7e285f8a8608d429b71b8d73cefed35519fd9cee86b"
+      "sha256": "80e030531031d25e06df36296ccd29af5df51104e2149365ac64dea7c933126b"
     },
     {
       "file": "lib/task-types.ts",
@@ -114,7 +126,7 @@
     },
     {
       "file": "public/assets/account.js",
-      "sha256": "86a230ee861afcb131d918694d733865d4e07188e6888acd987bedaa14807121"
+      "sha256": "04d89a6753831a64a41a05520d5635066cb420f0c875f29d5b173975ee37288b"
     },
     {
       "file": "public/assets/fonts/bricolage-grotesque-OFL.txt",
@@ -190,7 +202,7 @@
     },
     {
       "file": "standalone/login.html",
-      "sha256": "244dd8489a9d790929e4bdd47b9c82bea55b19dec037e0c1548399e2480971a2"
+      "sha256": "07c32ae0b7593568e23f3ec7fc2f4e4b6720d2f78bd70dbc091ff8b2e458514f"
     },
     {
       "file": "standalone/recall.html",
@@ -198,7 +210,7 @@
     },
     {
       "file": "standalone/server.mjs",
-      "sha256": "4c4f95add1f414dc64176192b618b64b84efe3b70a29516b2a91fe8b546ef3fa"
+      "sha256": "b5d095aa38ca88f6ddaad593d00135559b626090726d9a0cdee281666aab928d"
     },
     {
       "file": "standalone/settings.html",
@@ -301,6 +313,10 @@
       "sha256": "88779ae47d1a91ac4ebb1d7e9b1dc94bc0c6f306e54b14cbe371bcdb96c26a9c"
     },
     {
+      "file": "tests/github-review-fixes.test.mjs",
+      "sha256": "9d810db4e37f52530ef74a74676656cdd359a5a8de51589946d88fd44f563703"
+    },
+    {
       "file": "tests/local-ai-settings.test.mjs",
       "sha256": "b84ae5b1381fc221d8e895a45591e4294099845a62b61b2c13b895ae978af758"
     },
@@ -346,7 +362,7 @@
     },
     {
       "file": "tests/showcase.test.mjs",
-      "sha256": "6d4c0e9870b5547ff8f5797b1294e7906f58fed615543957cc69c68087cf9e63"
+      "sha256": "0735f812a44a85e60d3cabd8bc0aa45a2419ff190824efa1ebcd40ab1aec388d"
     },
     {
       "file": "tests/simulation.integration.test.mjs",
@@ -379,14 +395,6 @@
     {
       "file": "tests/workspace-handoff.test.mjs",
       "sha256": "50d49cf1a838cb54e2d3258204f89bb1b329c0ff718c4d404dcd79099fc16e07"
-    },
-    {
-      "file": "docs/acceptance/notion-owner.md",
-      "sha256": "7f909d65c770b7e18e0258adc382d8b0a427aa0aaab18cd949ee237330a77e45"
-    },
-    {
-      "file": "docs/assets/cover.png",
-      "sha256": "cf5baba2f49961ef018fc70fe9f08746af6a450be87ab829b339c2570a6d0c16"
     }
   ]
 }

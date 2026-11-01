@@ -101,10 +101,11 @@ export async function validateTasks(raw: unknown, meeting: MeetingInput, id: str
     const optional = (value: unknown, field: string, max = 100) => value === null ? null : bounded(value, field, max);
     const assignee = optional(v.assignee, '負責人', 80);
     let dueDate = optional(v.dueDate, '截止日期');
-    const dueText = optional(v.dueText, '原文期限');
+    let dueText = optional(v.dueText, '原文期限');
     if (dueDate !== null && !isDate(dueDate)) throw new InputError('截止日期格式不正確。');
     if (!['high', 'normal', 'low'].includes(v.priority as string)) throw new InputError('優先級格式不正確。');
     const warnings = Array.isArray(v.warnings) ? v.warnings.filter((w): w is string => typeof w === 'string' && w.length < 180).slice(0, 6) : [];
+    if(dueText&&!evidence.includes(dueText)){dueText=parseDue(evidence,meeting.meetingDate).dueText;warnings.push('期限文字未能在原文找到，已清除或改用原文期限');}
     let groundedOwner = assignee;
     if (ai) {
       if (groundedOwner && (!lines[lineIndex].includes(groundedOwner) || ownerOf(lines[lineIndex]) !== groundedOwner)) { groundedOwner = null; warnings.push('AI 負責人未能由原文明確確認，已清除'); }
