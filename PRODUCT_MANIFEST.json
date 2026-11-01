@@ -1,7 +1,7 @@
 {
   "version": "0.4.0",
   "exportedAt": "2026-11-01T02:20:13.009Z",
-  "sourceCommit": "543a8e6dd17c354730749bd70801164b1b265220",
+  "sourceCommit": "b3e24348cb8ea7cdaf947aa24a5f0273e52dfaa2",
   "scope": "Standalone desktop product; no source Git history, runtime accounts, secrets or private QA documents",
   "files": [
     {
@@ -14,7 +14,7 @@
     },
     {
       "file": "README.md",
-      "sha256": "473001f63d2f75de6c6238d824617dffa0acf796bdc588355399444a01d31bc8"
+      "sha256": "29478bb64353069c81a4039a517d89e7f1f87fe2408b675c2b518a8bc1c97ca3"
     },
     {
       "file": "Start_ActionDesk.command",

@@ -27,7 +27,7 @@ cd jibuzhu
 npm run start:background
 ```
 
-開啟 **http://127.0.0.1:4173/welcome**。首次使用選「建立帳號。
+開啟 **http://127.0.0.1:4173/welcome**。首次使用選「建立帳號」。
 
 若要前景執行、方便查看日誌：
 
