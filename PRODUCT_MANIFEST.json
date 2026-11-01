@@ -1,7 +1,7 @@
 {
   "version": "0.4.0",
   "exportedAt": "2026-11-01T02:20:13.009Z",
-  "sourceCommit": "a00a708166a6ff5fceb892aeeb003052948154c3",
+  "sourceCommit": "e81190e603d5c7b0f71f1bb76454414404f185a8",
   "scope": "Standalone desktop product; no source Git history, runtime accounts, secrets or private QA documents",
   "files": [
     {
@@ -54,7 +54,7 @@
     },
     {
       "file": "docs/index.html",
-      "sha256": "660457ddc75c2b20ec6995c7cefd1678388a09cfc26c81909b0843051cc9f70b"
+      "sha256": "0b06f592b0dd24575aebb5b4f84a4e9ccbf134ab2aee77bb4a32bcb2d30bdefa"
     },
     {
       "file": "docs/verification.md",
