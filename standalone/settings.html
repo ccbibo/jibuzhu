@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="在這台電腦設定記補住的 AI 整理服務。">
+<title>記補住｜本機 AI 設定</title>
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/assets/fonts/print-fonts.css">
+<style>
+:root{font-family:"Hanken Grotesk","PingFang TC","Noto Sans TC",sans-serif;color:#183844;background:#B9D8EC;font-size:16px;-webkit-font-smoothing:antialiased}*{box-sizing:border-box}body{margin:0;min-width:900px;min-height:100vh}header{height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 32px;border-bottom:2px solid #183844;background:#F2EAD8}a{color:inherit;text-underline-offset:4px}.brand{font-size:22px;font-weight:750;text-decoration:none;color:#0A5E49}header>a:last-child{font-size:13px;font-weight:600}main{max-width:650px;margin:65px auto;padding:32px;background:#FAF2E1;border:2px solid #183844;border-radius:24px;box-shadow:6px 6px 0 #183844}h1{font-family:"Bricolage Grotesque","PingFang TC",sans-serif;font-size:28px;line-height:1.4;margin:0 0 13px;font-weight:700}p{font-size:14px;line-height:1.9;margin:0 0 16px}.intro{color:#426575}.setting-state{padding:11px 14px;border-radius:12px;background:#E3EBDF;color:#0A5E49;font-size:13px;font-weight:600}.field{margin-top:23px}label{display:block;font-size:14px;line-height:1.8;font-weight:600;margin-bottom:7px}input,button{font:inherit}select,input[type=password],input[type=text]{width:100%;padding:12px 14px;border:1.5px solid #6D8D9B;border-radius:11px;background:#FFFDF7;color:#183844;line-height:1.6;font-size:14px}input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #0E8F6E;outline-offset:4px}.note{font-size:12px;color:#55717C;margin:8px 0 0}.consent{display:flex;gap:10px;align-items:flex-start;margin:25px 0 20px;font-size:13px;line-height:1.8;font-weight:500}.consent input{width:17px;height:17px;flex-shrink:0;margin:3px 0 0;accent-color:#0A5E49}button{min-height:44px;border:2px solid #183844;border-radius:22px;padding:10px 22px;background:#0A5E49;color:#FAF2E1;font-size:14px;font-weight:600;box-shadow:3px 3px 0 #183844;cursor:pointer}button:hover:not(:disabled){background:#14745D}button:disabled{opacity:.45;cursor:not-allowed}.status{font-size:13px;line-height:1.8;margin:19px 0 0;white-space:pre-wrap}.status:empty{display:none}.error{color:#A42E24}.success{color:#0A5E49}.return{display:inline-block;font-size:13px;font-weight:600;margin-top:25px}.footer-note{border-top:1px solid #D8C9AA;padding-top:19px;margin-top:25px;font-size:12px;line-height:1.8;color:#55717C}
+</style>
+</head>
+<body>
+<header><a class="brand" href="/">記補住</a><a href="/speakers">返回團隊總覽 ↗</a></header>
+<main>
+<h1>本機 AI 設定</h1>
+<p class="intro">選擇 AI 供應商並輸入 API 金鑰，啟用整場會議的 AI 整理。</p>
+<p id="configured" class="setting-state" role="status">正在檢查設定…</p>
+<form id="ai-settings">
+<div class="field"><label for="provider">AI 供應商</label><select id="provider" name="provider"><option value="deepseek">DeepSeek</option><option value="openai">OpenAI</option></select></div><div class="field"><label for="api-key" id="api-key-label">DeepSeek API 金鑰</label><input id="api-key" type="password" name="api-key" maxlength="256" autocomplete="off" autocapitalize="off" spellcheck="false" required placeholder="在此輸入金鑰"><p class="note">已儲存的金鑰不會顯示。要更換時，請輸入新的金鑰並再次儲存。</p></div>
+<div class="field"><label for="model">AI 模型</label><input id="model" type="text" name="model" value="deepseek-flash" maxlength="80" autocomplete="off" autocapitalize="off" spellcheck="false" required></div>
+<label class="consent" for="approved"><input id="approved" type="checkbox"><span>同意將金鑰儲存在這台電腦的記補住專案</span></label>
+<button id="save" type="submit" disabled>儲存本機設定</button>
+<p id="status" class="status" role="status" aria-live="polite"></p>
+</form>
+<a class="return" href="/speakers">返回團隊總覽 →</a>
+<p class="footer-note">金鑰只存本機，AI 整理時才交給所選 AI 供應商驗證；不會提交 Git。儲存設定不會傳送逐字稿，也不會立即驗證金鑰。</p>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+let saving=false,providerEdited=false;
+const providerLabel=value=>value==='openai'?'OpenAI':'DeepSeek';
+function selectProvider(){providerEdited=true;$('api-key-label').textContent=providerLabel($('provider').value)+' API 金鑰';$('model').value=$('provider').value==='openai'?'gpt-4o-mini':'deepseek-flash';$('api-key').value='';$('approved').checked=false;controls();}
+$('provider').addEventListener('change',selectProvider);
+function controls(){const valid=$('api-key').value.trim().length>0&&$('model').value.trim().length>0;$('save').disabled=saving||!$('approved').checked||!valid;$('provider').disabled=saving;$('api-key').disabled=saving;$('model').disabled=saving;$('approved').disabled=saving;$('save').textContent=saving?'正在儲存…':'儲存本機設定';}
+async function readStatus(){try{const response=await fetch('/api/status',{credentials:'same-origin',cache:'no-store'});if(!response.ok)throw Error();const result=await response.json();if(!providerEdited&&result.aiConfigured===true){$('provider').value=result.provider==='openai'?'openai':'deepseek';$('api-key-label').textContent=providerLabel($('provider').value)+' API 金鑰';$('model').value=result.model||($('provider').value==='openai'?'gpt-4o-mini':'deepseek-flash');}$('configured').textContent=result.aiConfigured===true?(result.providerLabel||providerLabel(result.provider))+' 已設定。金鑰欄位保持空白，可明確儲存新設定以更換。':'尚未設定 AI。儲存後即可回到團隊總覽整理會議。';}catch{$('configured').textContent='目前無法讀取設定狀態，請確認本機服務已啟動。';}}
+$('api-key').addEventListener('input',controls);$('model').addEventListener('input',controls);$('approved').addEventListener('change',controls);
+$('ai-settings').addEventListener('submit',async event=>{
+ event.preventDefault();if(saving||!$('approved').checked||!$('api-key').value.trim()||!$('model').value.trim()||!$('ai-settings').checkValidity())return;
+ saving=true;controls();$('status').className='status';$('status').textContent='正在儲存本機設定…';
+ try{const response=await fetch('/api/settings/ai',{method:'POST',credentials:'same-origin',cache:'no-store',headers:{'Content-Type':'application/json'},body:JSON.stringify({provider:$('provider').value,apiKey:$('api-key').value.trim(),model:$('model').value.trim(),approved:true})});if(!response.ok)throw Error();$('api-key').value='';$('approved').checked=false;$('configured').textContent=providerLabel($('provider').value)+' 已儲存。金鑰欄位保持空白；實際連線將在整理時驗證。';$('status').className='status success';$('status').textContent='已儲存。回到團隊總覽即可使用 AI 整理。';}
+ catch{$('status').className='status error';$('status').textContent='儲存未完成。請確認本機服務與設定權限，再重試。';}
+ finally{saving=false;controls();}
+});
+controls();readStatus();
+</script>
+</body>
+</html>

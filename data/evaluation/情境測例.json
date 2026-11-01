@@ -1,0 +1,16 @@
+{
+  "version": "2026-10-31",
+  "provenance": "全部為 AI 編寫的合成測例，非真人逐字稿、非訪談、非真人體驗資料。固定會議日期 2026-10-31。",
+  "cases": [
+    {"id":"S01","name":"明確承諾與源證據","transcript":"小美：我會明天提交報表。","expected":"一項；小美；2026-11-01；逐字依據及行號正確","layer":"core"},
+    {"id":"S02","name":"多輪人工修正","transcript":"小美：我會明天提交報表。","reviewRounds":[{"title":"提交初版報表","assignee":"小華","dueDate":"2026-11-03"},{"title":"提交最終報表","assignee":"小林","dueDate":"2026-11-04"}],"expected":"每輪保留同source identity；審閱欄位採最後輸入；不宣稱原文支持人工修正","layer":"core"},
+    {"id":"S03","name":"含糊日期","transcript":"小美：我會下週三提交報表。","expected":"dueDate=null，保留下週三及待確認提示","layer":"core"},
+    {"id":"S04","name":"否定與已完成","transcript":"小美：我會取消寄送。\n主任：小華已完成名單。\n主任：不用整理報表。","expected":"零項","layer":"core"},
+    {"id":"S05","name":"多輪跨行取消反例","transcript":"小美：我會明天提交報表。\n主任：取消上一項，小美不用提交。","expected":"產品語意應零項；目前規則不能解跨行撤銷，保留失敗反例","layer":"core known-gap"},
+    {"id":"S06","name":"AI人名否定反例","transcript":"主任：小美不是負責人，請小華整理名單。","candidateOwner":"小美","expected":"語意應拒絕小美或清空；目前出現性grounding不等於語意正確，保留失敗反例","layer":"core known-gap"},
+    {"id":"S07","name":"查核查無紀錄","transcript":"小美：我會明天提交報表。","provider":"query returns empty","expected":"reconcileOnly只query，不claim不create；uncertain","layer":"mocked provider"},
+    {"id":"S08","name":"Notion明確失敗與retry","transcript":"小美：我會明天提交報表。","provider":"create 400 then reviewed retry 200","expected":"failed後可顯式retry；成功一頁；uncertain不能照此retry","layer":"mocked provider"},
+    {"id":"S09","name":"CSV危險字元與源證據","transcript":"小美：我會明天提交報表。","reviewedTitle":"=1+1,\"報表\"","expected":"實際client匯出含BOM、標題公式保護、雙引號轉義、原文依據及1-based行號","layer":"client VM, no browser"},
+    {"id":"S10","name":"本人真Notion閉環","transcript":"驗收者：我會明天完成合成測試任務。","expected":"由本app經本人指定目標寫入並回讀；page ID、source ID、title/owner/date及SQLite相符；再次提交不新增。尚未執行，mock不能替代","layer":"liveNotion pending"}
+  ]
+}

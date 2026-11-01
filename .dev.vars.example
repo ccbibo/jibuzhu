@@ -1,0 +1,11 @@
+AI_PROVIDER=deepseek
+DEEPSEEK_API_KEY=
+DEEPSEEK_MODEL=deepseek-flash
+# Copy to .dev.vars. Leave empty for rules demo. Never commit actual values.
+OPENAI_API_KEY=
+OPENAI_MODEL=gpt-4o-mini
+NOTION_TOKEN=
+NOTION_DATA_SOURCE_ID=
+
+# Optional Notion top-level claim comment preview (not a verified identity ledger).
+NOTION_CLAIM_PAGE_ID=

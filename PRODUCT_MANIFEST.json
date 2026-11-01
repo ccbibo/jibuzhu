@@ -1,0 +1,384 @@
+{
+  "version": "0.4.0",
+  "exportedAt": "2026-11-01T02:20:13.009Z",
+  "sourceCommit": "a00a708166a6ff5fceb892aeeb003052948154c3",
+  "scope": "Standalone desktop product; no source Git history, runtime accounts, secrets or private QA documents",
+  "files": [
+    {
+      "file": ".dev.vars.example",
+      "sha256": "eae670a32ca9848429b293db8c2d96dd95f307e53aef4664311a2ccab4998684"
+    },
+    {
+      "file": ".gitignore",
+      "sha256": "45fb016d7eba8cee3ec9dac656ed47966c1a249eafd6a7a1fcbdcbcfe7396baa"
+    },
+    {
+      "file": "README.md",
+      "sha256": "37c4ac1c3e4c3e721e256a4f52c9292010f1ae2dc132bd44be1fec7cc89cd5db"
+    },
+    {
+      "file": "Start_ActionDesk.command",
+      "sha256": "bbd2af8983d9309384ce9227ab10c93f4f44e0ed21209b2b00b993caca4e9713"
+    },
+    {
+      "file": "Start_記補住.command",
+      "sha256": "bbd2af8983d9309384ce9227ab10c93f4f44e0ed21209b2b00b993caca4e9713"
+    },
+    {
+      "file": "data/evaluation/情境測例.json",
+      "sha256": "a3631fdfbf1c119f4fa1de60212baea69d4ebe0b8e1706ae39a265c4f3fad887"
+    },
+    {
+      "file": "docs/assets/fonts/hanken-grotesk.woff2",
+      "sha256": "1f21c6eaa0000f3329cfcfac966b43d5bebf5aa610303e33294ac31bc6f4bb59"
+    },
+    {
+      "file": "docs/assets/meeting-avatars.png",
+      "sha256": "7a0d7d4fb1d223b87ff2ef0c22fd3612feeca434c90757c79066f2d00bde1dc6"
+    },
+    {
+      "file": "docs/assets/showcase-font.css",
+      "sha256": "9a0435bbe51074290a6e3d6e1d40ff0c0ea7c08b4f1b054c65c589ec8758cd1b"
+    },
+    {
+      "file": "docs/assets/workspace.jpg",
+      "sha256": "e690092a2dd67224916a54281063ce35bf53dd1fb350e355f4ad388452b30490"
+    },
+    {
+      "file": "docs/governance/協作與上下文隔離規範.md",
+      "sha256": "e259310c0aafefac35636d88079f7190a072b43b5e0d8fbdd22c2b78162252f4"
+    },
+    {
+      "file": "docs/governance/夜間驗收門檻.md",
+      "sha256": "a10f6cf81763c79138bae23b6b5d72306de31d1e8fe4b9422d0fd8d11dfefe0b"
+    },
+    {
+      "file": "docs/index.html",
+      "sha256": "660457ddc75c2b20ec6995c7cefd1678388a09cfc26c81909b0843051cc9f70b"
+    },
+    {
+      "file": "docs/verification.md",
+      "sha256": "5f80b3ac6fca8394ba183f2451d01e66a2444574a26368f52aebb5c41c94e610"
+    },
+    {
+      "file": "lib/attribution.ts",
+      "sha256": "ee05b4c6e5fa112fd683f97520b94b0bea4d5cfb93c17d875d87522ac496abaa"
+    },
+    {
+      "file": "lib/local-auth.ts",
+      "sha256": "05ce4c3c6d255384d407104f10d4172bd70cc414d63f6736f92052097d519865"
+    },
+    {
+      "file": "lib/manager-board.ts",
+      "sha256": "95b44712039b41aee6d958a55c870125560d42b3e41b45cd813ee0b21af4f987"
+    },
+    {
+      "file": "lib/meeting-qa.ts",
+      "sha256": "a890045d980dcb2a6c7000d876bdd59b34a8e26a6462c7b0e4486c48c7c734e5"
+    },
+    {
+      "file": "lib/notion-attribution.ts",
+      "sha256": "37f950744ce8bb8524c407ebba7b13809de9614bcef9f2e0f737ecef9f914e96"
+    },
+    {
+      "file": "lib/notion-verify.ts",
+      "sha256": "1ae720b9122f535959869eea30efa565399575e2f0ad74cde3fad875a37c0882"
+    },
+    {
+      "file": "lib/providers.ts",
+      "sha256": "4c6ed4fff789be9778b8d036f26449c47f1fd192338d3d2ea61fadf1fe2438fe"
+    },
+    {
+      "file": "lib/recall-engine.ts",
+      "sha256": "add0f3aa92ce760b29876f79856f8539d8fe19286e03de6b95a7b68186a6ea96"
+    },
+    {
+      "file": "lib/server-sync.ts",
+      "sha256": "6687c180d8981c6fea9bca482c6036127710bb9348eb52f3f078b4a689880581"
+    },
+    {
+      "file": "lib/task-engine.ts",
+      "sha256": "75357213fcce48cdc608e7e285f8a8608d429b71b8d73cefed35519fd9cee86b"
+    },
+    {
+      "file": "lib/task-types.ts",
+      "sha256": "99c4fe5c5224d0d42b8ac2836e4e479976f20c6ca2e698d51d415ab55e4e796e"
+    },
+    {
+      "file": "lib/team-summary.ts",
+      "sha256": "0d31fb6912db481183bfbe6562512e98a9cb5dd363034244c145bf18511124c8"
+    },
+    {
+      "file": "package.json",
+      "sha256": "2e452837b029aa8809e0b1d548572180c46c0871fe94a673a4a7d6e92913c910"
+    },
+    {
+      "file": "public/assets/account.js",
+      "sha256": "86a230ee861afcb131d918694d733865d4e07188e6888acd987bedaa14807121"
+    },
+    {
+      "file": "public/assets/fonts/bricolage-grotesque-OFL.txt",
+      "sha256": "4b5a7d8f37f5602621c8a8d7358a6a2e71317e6c231c661e15aef0275d3e07ba"
+    },
+    {
+      "file": "public/assets/fonts/bricolage-grotesque.woff2",
+      "sha256": "85f55a58a31e61a2e19e8bb25fed503181bf2a6b4cab76c589992cfaac377447"
+    },
+    {
+      "file": "public/assets/fonts/hanken-grotesk-OFL.txt",
+      "sha256": "e02ccb89a86839b22feff7872ff5cc355cc0f58318d29eee20e2cf83a612f16d"
+    },
+    {
+      "file": "public/assets/fonts/hanken-grotesk.woff2",
+      "sha256": "1f21c6eaa0000f3329cfcfac966b43d5bebf5aa610303e33294ac31bc6f4bb59"
+    },
+    {
+      "file": "public/assets/fonts/print-fonts.css",
+      "sha256": "74ad6517d021d514c9a861c22c73a81a64e7cbb1b3091377afca0e0b80897601"
+    },
+    {
+      "file": "public/assets/fonts/sources.json",
+      "sha256": "1c65105172fed23f81c7adaf40ff6f5384ab02169a2a069d79cc2a93e4d2a9ca"
+    },
+    {
+      "file": "public/assets/fonts/spline-sans-mono-OFL.txt",
+      "sha256": "4abb88162e4c0c5f9fc6c2f15d7085f7b7e27fd89f541a13488e1bcb829bde3f"
+    },
+    {
+      "file": "public/assets/fonts/spline-sans-mono.woff2",
+      "sha256": "2b193a4f0fef3fc4c6a3fa756bb5dab6c10b489acd5e0718736847755077e9ec"
+    },
+    {
+      "file": "public/assets/meeting-avatars.png",
+      "sha256": "7a0d7d4fb1d223b87ff2ef0c22fd3612feeca434c90757c79066f2d00bde1dc6"
+    },
+    {
+      "file": "public/assets/meeting-print.png",
+      "sha256": "87abf9213fbf1bade717ab4d1fbd470ace69d29329d49bf5f6e76ae50b1eb291"
+    },
+    {
+      "file": "public/assets/workspace.js",
+      "sha256": "522bd30d505480dd62fa1924581ef930f1a0605f418693bb0d21384dc1ca59bf"
+    },
+    {
+      "file": "public/favicon.svg",
+      "sha256": "1c968b767a80942eb21e39c5ff05a9a1e09525d4dc45cf168b932e66b0ef80ce"
+    },
+    {
+      "file": "scripts/package-product.mjs",
+      "sha256": "1f5a32921bbec960a302566bc09e00f6c9f34b514e9503c9e8ed939823695889"
+    },
+    {
+      "file": "scripts/simulation-server.mjs",
+      "sha256": "6790c42b71691a89623811c85b9dd64e8fc0e11b3cfcde5addde5939a7a121a8"
+    },
+    {
+      "file": "scripts/start-local-background.mjs",
+      "sha256": "02922a76eaf6ad13d45d9069538a2ec674ee981038fff260a7ae9844d62d76a1"
+    },
+    {
+      "file": "standalone/account.html",
+      "sha256": "d07da996f22c0127cec11322c3249b947d126ff4ec4e3b185f72e800f81e7fc0"
+    },
+    {
+      "file": "standalone/attribution.html",
+      "sha256": "894d786975db95da9dbfadab609603706b149e64c0b8fbccca909a802a4e9c9c"
+    },
+    {
+      "file": "standalone/index.html",
+      "sha256": "f79ef1755f31bfd520adc905584af0acbf0a27330f41ebc5f2011533be9c569d"
+    },
+    {
+      "file": "standalone/login.html",
+      "sha256": "244dd8489a9d790929e4bdd47b9c82bea55b19dec037e0c1548399e2480971a2"
+    },
+    {
+      "file": "standalone/recall.html",
+      "sha256": "2c1c39d6c8faa6572bbf7594e98fce913d61ff6a63b3e4de9daa1e47adaf471c"
+    },
+    {
+      "file": "standalone/server.mjs",
+      "sha256": "4c4f95add1f414dc64176192b618b64b84efe3b70a29516b2a91fe8b546ef3fa"
+    },
+    {
+      "file": "standalone/settings.html",
+      "sha256": "0949348405d2182a4b9796d1d67757edffb7c278e334e657b2cc35061b29ad63"
+    },
+    {
+      "file": "standalone/welcome.html",
+      "sha256": "d2b37f3f2663870f546604aa5b1f5e36ab0341f0750b6593f669e84483cd18c1"
+    },
+    {
+      "file": "tests/acceptance-01.test.mjs",
+      "sha256": "35107f271c1d9289e2d8cf4dcdcc1e1e5dd5183ed25682064cc14ea632f198f5"
+    },
+    {
+      "file": "tests/acceptance-02.test.mjs",
+      "sha256": "4d028ae4333609a94bbd4eb7faf2d60f8761795c3007cd544fb3273a84e742ef"
+    },
+    {
+      "file": "tests/acceptance-03.test.mjs",
+      "sha256": "9807204e009b7ba2ef62e75aecf7417269f6e676bce45555edeede810d6e4e1e"
+    },
+    {
+      "file": "tests/acceptance-04.test.mjs",
+      "sha256": "3b0c534bb2e221c6897b440937ee7baa55207e80dddd4e4a3dee9b4fb3f7a405"
+    },
+    {
+      "file": "tests/acceptance-05.test.mjs",
+      "sha256": "0a657965906d8672b88eae045e9409365e75d09335b6f2fa8ff94f1debab6bfd"
+    },
+    {
+      "file": "tests/acceptance-06-round2.test.mjs",
+      "sha256": "4ab65648c1b74d2723c124fc0da5e7539f0babc7bb0ab7943f324416966d13fa"
+    },
+    {
+      "file": "tests/acceptance-06-round3.test.mjs",
+      "sha256": "e5e3c6538bf29e041ab684d05989232e4158e21872d9700515d02602458d3df9"
+    },
+    {
+      "file": "tests/acceptance-06.test.mjs",
+      "sha256": "ebccee5f814a579dcb557259c471cfc47a661594c1a9269718bff112b615a974"
+    },
+    {
+      "file": "tests/acceptance-07.test.mjs",
+      "sha256": "a445845845dfab1fe21628e42b2ac2249d3e642fdef3f6dae3504cfee74bb5c8"
+    },
+    {
+      "file": "tests/acceptance-08.test.mjs",
+      "sha256": "81276d2febef64cb533707539c6bc9a30dd87cb2ed1159b361de9ce3fa92711d"
+    },
+    {
+      "file": "tests/acceptance-09.test.mjs",
+      "sha256": "ef71a9f06a99a6ea9939fa044264fa779e628c7bffa050782471a0df7a03f6d7"
+    },
+    {
+      "file": "tests/acceptance-10.test.mjs",
+      "sha256": "b2a3949a667e2b25ec0820a14bd7dec27edbf3f831ed6964d3024090746e8586"
+    },
+    {
+      "file": "tests/ai-cancellation.test.mjs",
+      "sha256": "48453d5f0097cb1580699d222912c97ac652ed70533a594a9c1eb3d09d8dbf03"
+    },
+    {
+      "file": "tests/ai-consent.test.mjs",
+      "sha256": "c6826fd978f46503d82dae12c7ab61ec4fb6709634a2221551ecaae2191e9fcf"
+    },
+    {
+      "file": "tests/attribution-acceptance.test.mjs",
+      "sha256": "4920bcde71d7e2bdd416b26955877f9bb1acff5033dfc0102408501f44984e41"
+    },
+    {
+      "file": "tests/attribution.test.mjs",
+      "sha256": "21c70961c49707e1e2165fda52c2b503ec426da92d1fd6327063478538d9ba07"
+    },
+    {
+      "file": "tests/audit95-auth-ui.test.mjs",
+      "sha256": "246d1f3f8792763daecd0bf94f47cf3ef685e32e0a085d4462f0afe13a46d9af"
+    },
+    {
+      "file": "tests/audit95-auth.test.mjs",
+      "sha256": "b8fb9229d982bb0c3a272487ab8943d78bdf2043dba26b8a76dab95efe344fc4"
+    },
+    {
+      "file": "tests/audit95-reliability.test.mjs",
+      "sha256": "dfc65bdfb46db2c1a23aebebd921415eab5d3a178d593aba2d875967b61b2894"
+    },
+    {
+      "file": "tests/audit95-workflows.test.mjs",
+      "sha256": "79082e037f414393e06fcb5e717c8576a851aabc8f8ef015ce1ac6df476041e9"
+    },
+    {
+      "file": "tests/auth-http-fixture.mjs",
+      "sha256": "81db83341532069811cb763434d852c0c64e1fd3b613b2591880bd050cedaa99"
+    },
+    {
+      "file": "tests/card-collaboration.test.mjs",
+      "sha256": "fd1cb98c516598aff817dda08b824fc370cac17a767b9a8a45ce7883163244e6"
+    },
+    {
+      "file": "tests/deepseek-provider.test.mjs",
+      "sha256": "88779ae47d1a91ac4ebb1d7e9b1dc94bc0c6f306e54b14cbe371bcdb96c26a9c"
+    },
+    {
+      "file": "tests/local-ai-settings.test.mjs",
+      "sha256": "b84ae5b1381fc221d8e895a45591e4294099845a62b61b2c13b895ae978af758"
+    },
+    {
+      "file": "tests/local-auth.test.mjs",
+      "sha256": "92c4d3eeed3e3a372ddb3bc3ae6176fc3896fe2f0ea56be9b842809f6caff251"
+    },
+    {
+      "file": "tests/manager-board.test.mjs",
+      "sha256": "d38594f8f0a1c8ce947684cdbf279183cc9fc8b6cfd0ece68343c3ac5cb50729"
+    },
+    {
+      "file": "tests/meeting-qa.test.mjs",
+      "sha256": "017bfc1b46dd9979e9b753db973359c5d717cf2c3aa38df111b9de3e6f769fc0"
+    },
+    {
+      "file": "tests/notion-attribution.test.mjs",
+      "sha256": "500d28673dae9de4d9b33ec3c705fd7fed6ca855a67bcbb156201ff5f864460b"
+    },
+    {
+      "file": "tests/notion-verify.test.mjs",
+      "sha256": "94e4b871fac5d93985273dd8cc35409901265df3c7a1eed00d7986af3413c1b7"
+    },
+    {
+      "file": "tests/print-assets.test.mjs",
+      "sha256": "447ac6e4bb7246b39292007b40c5378d11f5e84c58eb90e9463e1f11a3b924a6"
+    },
+    {
+      "file": "tests/providers.test.mjs",
+      "sha256": "496474410520774c77a740724d59bf9f865ba76021399c34870de97757c25199"
+    },
+    {
+      "file": "tests/recall-api.test.mjs",
+      "sha256": "7fad00b183f98ec7fbe847060aaa385545b8eabaf8bdbb343141ec6838003583"
+    },
+    {
+      "file": "tests/recall-engine.test.mjs",
+      "sha256": "a5e4d700fb7667dfb7d604402acdc6db5b3d85619dbc754079aeaaa605c78eeb"
+    },
+    {
+      "file": "tests/scenarios.test.mjs",
+      "sha256": "b1140e586f31a1b285bb6af11e9ba048210a5620d6a359245fdd9213869c6b06"
+    },
+    {
+      "file": "tests/showcase.test.mjs",
+      "sha256": "6d4c0e9870b5547ff8f5797b1294e7906f58fed615543957cc69c68087cf9e63"
+    },
+    {
+      "file": "tests/simulation.integration.test.mjs",
+      "sha256": "c35e57ea220087ce6e05007bb030d1e9c67360bcf33f173132d6148803aa09af"
+    },
+    {
+      "file": "tests/standalone.test.mjs",
+      "sha256": "a7893a4b3204e7c3bb5ae6c63e9ac4c0cd71bbf56423da25bc62f49a6295a167"
+    },
+    {
+      "file": "tests/sync.test.mjs",
+      "sha256": "97c05f333e57f8db00058409a57012001a847849c8aac51a28ebbc0c12a039a2"
+    },
+    {
+      "file": "tests/task-engine.test.mjs",
+      "sha256": "d93335d36fb5042c3fa07178e960c62e099b1533f5f1c405d8b35eb69318f9bf"
+    },
+    {
+      "file": "tests/team-overview-ui.test.mjs",
+      "sha256": "7d15e11a1627f2b8af3a95442ffbc7379317d7241d7b465b62be7b4634865050"
+    },
+    {
+      "file": "tests/team-summary-api.test.mjs",
+      "sha256": "2730574900078fe938293d94abf543701abfd23bbd3205c88310cb6dabd86214"
+    },
+    {
+      "file": "tests/team-summary.test.mjs",
+      "sha256": "aadfad9d771997972b37553030c2cfe41d226ef12f5c2596db1396313971eb25"
+    },
+    {
+      "file": "tests/workspace-handoff.test.mjs",
+      "sha256": "50d49cf1a838cb54e2d3258204f89bb1b329c0ff718c4d404dcd79099fc16e07"
+    }
+  ]
+}

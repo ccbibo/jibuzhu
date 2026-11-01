@@ -1,0 +1,17 @@
+{
+  "name": "jibuzhu-meeting-recall",
+  "version": "0.4.0",
+  "private": true,
+  "description": "記補住：以人物與原文為中心的本機會議助手",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types standalone/server.mjs",
+    "start:local": "node --experimental-strip-types standalone/server.mjs",
+    "start:background": "node scripts/start-local-background.mjs",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "demo": "node --experimental-strip-types scripts/simulation-server.mjs"
+  }
+}
