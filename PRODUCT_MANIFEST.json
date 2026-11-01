@@ -1,7 +1,7 @@
 {
   "version": "0.4.0",
   "exportedAt": "2026-11-01T02:20:13.009Z",
-  "sourceCommit": "f0991ab8bb258422897da13497c519a4bd8615d4",
+  "sourceCommit": "543a8e6dd17c354730749bd70801164b1b265220",
   "scope": "Standalone desktop product; no source Git history, runtime accounts, secrets or private QA documents",
   "files": [
     {
@@ -14,7 +14,7 @@
     },
     {
       "file": "README.md",
-      "sha256": "37c4ac1c3e4c3e721e256a4f52c9292010f1ae2dc132bd44be1fec7cc89cd5db"
+      "sha256": "473001f63d2f75de6c6238d824617dffa0acf796bdc588355399444a01d31bc8"
     },
     {
       "file": "Start_ActionDesk.command",
@@ -58,7 +58,7 @@
     },
     {
       "file": "docs/verification.md",
-      "sha256": "5f80b3ac6fca8394ba183f2451d01e66a2444574a26368f52aebb5c41c94e610"
+      "sha256": "3d2763bf3c9500247f390ac75253c22688336586300c95b45bc8cce47eb3997c"
     },
     {
       "file": "lib/attribution.ts",
@@ -166,7 +166,7 @@
     },
     {
       "file": "scripts/package-product.mjs",
-      "sha256": "1f5a32921bbec960a302566bc09e00f6c9f34b514e9503c9e8ed939823695889"
+      "sha256": "cf3e32b3228de94f855c2aefecdbcf7b8a2a59f06329ea14b28dbdf397cfe013"
     },
     {
       "file": "scripts/simulation-server.mjs",
@@ -342,7 +342,7 @@
     },
     {
       "file": "tests/scenarios.test.mjs",
-      "sha256": "b1140e586f31a1b285bb6af11e9ba048210a5620d6a359245fdd9213869c6b06"
+      "sha256": "7a5084f1bc05f67a265e64b6c6713fb4ada8cc69a03c67e0c04efc793bcf1d17"
     },
     {
       "file": "tests/showcase.test.mjs",
@@ -379,6 +379,14 @@
     {
       "file": "tests/workspace-handoff.test.mjs",
       "sha256": "50d49cf1a838cb54e2d3258204f89bb1b329c0ff718c4d404dcd79099fc16e07"
+    },
+    {
+      "file": "docs/acceptance/notion-owner.md",
+      "sha256": "7f909d65c770b7e18e0258adc382d8b0a427aa0aaab18cd949ee237330a77e45"
+    },
+    {
+      "file": "docs/assets/cover.png",
+      "sha256": "cf5baba2f49961ef018fc70fe9f08746af6a450be87ab829b339c2570a6d0c16"
     }
   ]
 }
